@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Life Supermarket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Noto Sans TC', sans-serif;
+        background-color: #f3f4f6;
+        overscroll-behavior: none;
+        overflow: hidden; /* Prevent scrolling globally */
+      }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+        100% { transform: translateY(0px); }
+      }
+      
+      @keyframes float-delay {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+        100% { transform: translateY(0px); }
+      }
+
+      @keyframes shine {
+        0% { background-position: -200%; }
+        100% { background-position: 200%; }
+      }
+
+      .animate-float {
+        animation: float 4s ease-in-out infinite;
+      }
+      
+      .animate-float-delay {
+        animation: float-delay 5s ease-in-out infinite;
+      }
+
+      .animate-shine {
+        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        animation: shine 3s infinite linear;
+      }
+
+      /* Konva container fix */
+      .konvajs-content {
+        margin: 0 auto;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "zustand": "https://esm.sh/zustand@^5.0.10",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "use-image": "https://esm.sh/use-image@^1.1.4",
+    "react-konva": "https://esm.sh/react-konva@^19.2.1",
+    "file-saver": "https://esm.sh/file-saver@^2.0.5",
+    "konva": "https://esm.sh/konva@^10.1.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
